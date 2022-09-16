@@ -6,6 +6,9 @@ interface EconomyModel {
     bank: number;
     cooldowns: {
         work: Date;
+        daily: Date;
+        beg: Date;
+        rob: Date;
     }
 }
 
@@ -14,7 +17,10 @@ const schema = new mongoose.Schema<EconomyModel>({
     wallet: { type: Number, required: true, default: 0 },
     bank: { type: Number, required: true, default: 0 },
     cooldowns: {
-        work: { type: Date, required: true, default: Date.now() }
+        work: { type: Date, required: true, default: Date.now() },
+        daily: { type: Date, required: true, default: Date.now() },
+        beg: { type: Date, required: true, default: Date.now() },
+        rob: { type: Date, required: true, default: Date.now() }
     }
 });
 

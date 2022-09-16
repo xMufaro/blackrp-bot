@@ -8,7 +8,7 @@ const jobList = [
     "👮‍♂️ Policjant",
     "🕵️ Detektyw",
     "💂‍♂️ Strażnik",
-    "🥷 Ninja",
+    "🥷 Najemnik",
     "👷‍♂️ Budowniczy",
     "👨‍⚕️ Lekarz",
     "👨‍🏫 Nauczyciel",
@@ -33,7 +33,7 @@ export default new Command({
 
         const job = jobList[Math.floor(Math.random() * jobList.length)];
 
-        const amount = Math.floor(Math.random() * (500 + (Math.random() * ((db.wallet + db.wallet) * 0.05)))) + 300 ;
+        const amount = Math.floor(Math.random() * (500 + (Math.random() * ((db.wallet + db.bank) * 0.05)))) + 300 ;
 
 
         if(db.cooldowns.work.getTime() > Date.now()) {
